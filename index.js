@@ -8,23 +8,14 @@ app.get('/', function (req, res) {
     res.sendFile('index.html', {root: path.join(__dirname, 'app')});
 });
 
-// RESOURCES
+app.get('/redir_nhvsasi', function (req, res) {
+    "use strict";
+    res.redirect('https://nahvusasi.com');
+});
 
-app.get('/assets/global.css', function (req, res) {
+app.get('/redir_newtasi', function (req, res) {
     "use strict";
-    res.sendFile('global.css', {root: path.join(__dirname, 'app/assets')});
-});
-app.get('/assets/style.css', function (req, res) {
-    "use strict";
-    res.sendFile('style.css', {root: path.join(__dirname, 'app/assets')});
-});
-app.get('/assets/default.js', function (req, res) {
-    "use strict";
-    res.sendFile('default.js', {root: path.join(__dirname, 'app/assets')});
-});
-app.get('/assets/script.js', function (req, res) {
-    "use strict";
-    res.sendFile('script.js', {root: path.join(__dirname, 'app/assets')});
+    res.redirect('https://newtonasi.com');
 });
 
 app.listen(8080);
