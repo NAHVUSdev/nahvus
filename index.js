@@ -8,6 +8,13 @@ app.get('/', function (req, res) {
     res.sendFile('index.html', {root: path.join(__dirname, 'app')});
 });
 
+app.get('/:url', function (req, res) {
+    "use strict";
+    var url = req.params.url;
+
+    res.sendFile('/' + url + '/', {root: path.join(__dirname, 'app')});
+});
+
 app.get('/redir_nhvsasi', function (req, res) {
     "use strict";
     res.redirect('https://nahvusasi.com');
