@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- PAGE DATA -->
+    <meta charset="UTF-8">
+    <title id="title">NAHVUS // your account</title>
+
+    <!-- EXTERNAL IMPORTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/wxt4ubk.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+
+    <!-- LOCAL IMPORTS -->
+    <link rel="stylesheet" href="https://nahvuscdn.com/global.css" type="text/css">
+    <script src="https://nahvuscdn.com/default.js" type="text/javascript"></script>
+</head>
+
+<body onload="pageInit">
+
+    <!-- MAIN MENU -->
+    <div class='mainMenuWrapper'>
+        <a>
+            <p class='menuBranding'>NAHVUS</p>
+        </a>
+        <a id='dynamic' class='menuLink' href='/lifestyle'>lifestyle</a>
+        <a id='dynamic' class='menuLink' href='/health'>health</a>
+        <a id='dynamic' class='menuLink' href='/reviews'>reviews</a>
+        <a id='dynamic' class='menuLinkActive' href='/user/account/'>account</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class='contentWrapper'>
+        <p class='heading' id='fallback'></p>
+        <div class='card' id='card'>
+            <p id='name'></p>
+            <p id='email'></p>
+            <p id='plan'></p>
+            <p id='planOptions'></p>
+        </div>
+    </div>
+    <script>
+        var name = document.getElementById('name');
+        var card = document.getElementById('card');
+        var fallback = document.getElementById('fallback');
+        if (name.innerHTML === undefined) {
+            card.style.display = 'none';
+            fallback.innerHTML = 'No user logged in.';
+            window.location.href = '/';
+        }
+    </script>
+</body>
+
+</html>
