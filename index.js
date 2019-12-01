@@ -8,11 +8,29 @@ app.get('/', function (req, res) {
     res.sendFile('index.html', {root: path.join(__dirname, 'app')});
 });
 
-app.get('/:url', function (req, res) {
+app.get('/lifestyle', function (req, res) {
     "use strict";
-    var url = req.params.url;
+    res.sendFile('/lifestyle/index.html', {root: path.join(__dirname, 'app')});
+});
 
-    res.sendFile('/' + url + '/', {root: path.join(__dirname, 'app')});
+app.get('/health', function (req, res) {
+    "use strict";
+    res.sendFile('/health/index.html', {root: path.join(__dirname, 'app')});
+});
+
+app.get('/user/account', function (req, res) {
+    "use strict";
+    res.sendFile('/user/account.html', {root: path.join(__dirname, 'app')});
+});
+
+app.get('/welcome', function (req, res) {
+    "use strict";
+    res.sendFile('welcome.html', {root: path.join(__dirname, 'app')});
+});
+
+app.get('/incomplete', function (req, res) {
+    "use strict";
+    res.sendFile('incomplete.html', {root: path.join(__dirname, 'app')});
 });
 
 app.get('/redir_nhvsasi', function (req, res) {
