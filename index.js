@@ -9,17 +9,17 @@ app.get('/', function (req, res) {
 
 app.get('/lifestyle', function (req, res) {
     "use strict";
-    res.sendFile('./lifestyle/index.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('index.html', {root: path.join(__dirname, 'app/lifestyle')});
 });
 
 app.get('/health', function (req, res) {
     "use strict";
-    res.sendFile('./health/index.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('index.html', {root: path.join(__dirname, 'app/health')});
 });
 
 app.get('/user/account', function (req, res) {
     "use strict";
-    res.sendFile('./user/account.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('.account.html', {root: path.join(__dirname, 'app/user')});
 });
 
 app.get('/welcome', function (req, res) {
