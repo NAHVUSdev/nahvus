@@ -19,7 +19,7 @@ app.get('/health', function (req, res) {
 
 app.get('/reviews', function (req, res) {
     "use strict";
-    res.sendFile('index.html', {root: path.join(__dirname, 'app/reviews')});
+    res.sendFile('index.html', {root: path.join(__dirname, 'app/Reviews')});
 });
 
 app.get('/user/account', function (req, res) {
