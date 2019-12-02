@@ -1,4 +1,3 @@
-var require;
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -10,17 +9,17 @@ app.get('/', function (req, res) {
 
 app.get('/lifestyle', function (req, res) {
     "use strict";
-    res.sendFile('lifestyle/index.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('./lifestyle/index.html', {root: path.join(__dirname, 'app')});
 });
 
 app.get('/health', function (req, res) {
     "use strict";
-    res.sendFile('health/index.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('./health/index.html', {root: path.join(__dirname, 'app')});
 });
 
 app.get('/user/account', function (req, res) {
     "use strict";
-    res.sendFile('user/account.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('./user/account.html', {root: path.join(__dirname, 'app')});
 });
 
 app.get('/welcome', function (req, res) {
