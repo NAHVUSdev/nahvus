@@ -4,7 +4,7 @@ var path = require('path');
 
 app.get('/', function (req, res) {
     "use strict";
-    res.sendFile('index.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('index.html', {root: path.join(__dirname, 'app/static')});
 });
 
 app.get('/lifestyle', function (req, res) {
@@ -19,22 +19,22 @@ app.get('/health', function (req, res) {
 
 app.get('/reviews', function (req, res) {
     "use strict";
-    res.sendFile('index.html', {root: path.join(__dirname, 'app/Reviews')});
+    res.sendFile('index.html', {root: path.join(__dirname, 'app/reviews')});
 });
 
 app.get('/user/account', function (req, res) {
     "use strict";
-    res.sendFile('.account.html', {root: path.join(__dirname, 'app/user')});
+    res.sendFile('account.html', {root: path.join(__dirname, 'app/user')});
 });
 
 app.get('/welcome', function (req, res) {
     "use strict";
-    res.sendFile('welcome.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('welcome.html', {root: path.join(__dirname, 'app/static')});
 });
 
 app.get('/incomplete', function (req, res) {
     "use strict";
-    res.sendFile('incomplete.html', {root: path.join(__dirname, 'app')});
+    res.sendFile('incomplete.html', {root: path.join(__dirname, 'app/static')});
 });
 
 app.get('/redir_nhvsasi', function (req, res) {
