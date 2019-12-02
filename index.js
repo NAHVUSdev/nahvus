@@ -17,6 +17,11 @@ app.get('/health', function (req, res) {
     res.sendFile('index.html', {root: path.join(__dirname, 'app/health')});
 });
 
+app.get('/reviews', function (req, res) {
+    "use strict";
+    res.sendFile('index.html', {root: path.join(__dirname, 'app/reviews')});
+});
+
 app.get('/user/account', function (req, res) {
     "use strict";
     res.sendFile('.account.html', {root: path.join(__dirname, 'app/user')});
